@@ -1,0 +1,122 @@
+@import "common/style/variable";
+@import "common/style/mixin";
+
+.header {
+    position: relative;
+    overflow: hidden;
+    background: $bgColor-ss;
+    color: $fontColor;
+}
+
+.header-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 24px 12px 18px 24px;
+
+    .avatar {
+        margin-right: 16px;
+    }
+
+    .content {
+        padding: 2px 0;
+
+        .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            .brand {
+                width: 30px;
+                height: 18px;
+                margin-right: 12px;
+                background-size: 30px 18px;
+                @include bg-image('brand');
+            }
+
+            .name {
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 18px;
+            }
+        }
+
+        .description {
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        .support {
+            font-size: 10px;
+            line-height: 12px;
+            margin-top: 10px;
+        }
+    }
+
+    .support-count {
+        position: absolute;
+        right: 12px;
+        bottom: 16px;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 7px 8px;
+        background: $bgColor-sss;
+        border-radius: 14px;
+
+        i {
+            vertical-align: middle;
+        }
+    }
+
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+}
+
+.bulletin-wrapper {
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    background: $bgColor-sss;
+    padding: 0 22px 0 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .bulletin {
+        display: inline-block;
+        width: 22px;
+        height: 12px;
+        line-height: 12px;
+        background-size: 22px 12px;
+        margin-right: 4px;
+        vertical-align: middle;
+        @include bg-image('bulletin');
+    }
+
+    .bulletin-content {
+        vertical-align: middle;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+    }
+}
+
+.van-popup {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
